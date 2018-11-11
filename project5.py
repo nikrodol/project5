@@ -34,7 +34,8 @@ def book_cipher(crypto_key, your_textfile, encrypting_text):
         print('We have problem with names of files. Please, enter names of files again.')
         choise_file()
     except:
-        print('Sorry, we don\' know why this programm have problem. May be run this programm again?')
+        print('Sorry, we don\' know why this programm have problem. Please, check presence key-text in key-file'
+              'May be run this programm again?')
         choise_file() if input('Your answer: ').lower() == 'yes' else print('Okey. Goodbye!')
 
 
