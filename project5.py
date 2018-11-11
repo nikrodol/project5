@@ -1,7 +1,5 @@
 """ Упрощенная модель книжного шифра
-    (используется одна страница; используя базовый текст в файле-ключе
-     допускаются некоторый набор знаков препинания и кириллические буквы, цифры не допускаются;
-     в случае нужды введите более полный текст).
+    (используется одна страница).
 """
 from random import randint
 
@@ -10,7 +8,6 @@ def book_cipher(crypto_key, your_textfile, encrypting_text):
     try:
         with open(crypto_key) as f_key:  # Reading file with key-text
             key_text = f_key.readlines()
-            print('Oh Fuck!')
         with open(your_textfile) as f_in:  # Reading file with your text
             your_text = f_in.read().lower()
         with open(encrypting_text, 'w') as f_out:
